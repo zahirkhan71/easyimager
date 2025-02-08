@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Image Converter Tool</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Reset & Basic Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fc;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+    }
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #4b6cb7, #182848);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    /* About Section */
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      gap: 20px;
+    }
+    .about-image {
+      flex: 1 1 300px;
+    }
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .about-content {
+      flex: 2 1 500px;
+    }
+    .about-content h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #182848;
+    }
+    .about-content p {
+      margin-bottom: 20px;
+    }
+    /* Team Section */
+    .team-section {
+      margin-top: 60px;
+      text-align: center;
+    }
+    .team-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #182848;
+    }
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .team-member {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .team-member h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+    .team-member p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    /* Footer */
+    footer {
+      background: #182848;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    /* Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Image Converter Tool</h1>
+      <nav>
+        <ul>
+         <li><a href="index.html">Home</a></li>
+          <li><a href="About us.html">About Us</a></li>
+          <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+          <li><a href="Contact us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- About Section -->
+    <section class="about-section fade-in" id="about">
+      <div class="about-image">
+        <img src="https://via.placeholder.com/400x300" alt="About Us Image" />
+      </div>
+      <div class="about-content">
+        <h2>About Us</h2>
+        <p>
+          Welcome to Image Converter Tool, your ultimate solution for fast,
+          reliable, and high-quality image conversion. Our mission is to
+          provide a seamless experience for converting images between various
+          formats including WebP, JPEG, PNG, TIFF, and more.
+        </p>
+        <p>
+          With cutting-edge technology, our tool is designed to help you optimize
+          images for the web, improve load times, and maintain high-quality visuals.
+          Whether you need to convert webp to jpg, webp to png, jpeg to jpg, or any
+          other image conversion, we’ve got you covered.
+        </p>
+        <p>
+          Our dedicated team of experts is constantly innovating to enhance our
+          services, ensuring that you always have access to the best image conversion
+          tools available.
+        </p>
+      </div>
+    </section>
+
+    <!-- Team Section
+    <section class="team-section fade-in" id="team">
+      <h2>Meet Our Team</h2>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="https://via.placeholder.com/100" alt="Team Member" />
+          <h3>John Doe</h3>
+          <p>Founder & CEO</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/100" alt="Team Member" />
+          <h3>Jane Smith</h3>
+          <p>Lead Developer</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/100" alt="Team Member" />
+          <h3>Mike Johnson</h3>
+          <p>UI/UX Designer</p>
+        </div>
+      </div>
+    </section> -->
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Image Converter Tool. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Fade-in Animation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (
+        entries,
+        appearOnScroll
+      ) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("visible");
+          appearOnScroll.unobserve(entry.target);
+        });
+      },
+      appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+</body>
+</html>
