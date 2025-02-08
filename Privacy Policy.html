@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Image Converter Tool</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Reset & Basic Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fc;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+    }
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #4b6cb7, #182848);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    /* Privacy Policy Section */
+    .policy-section {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+    }
+    .policy-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #182848;
+    }
+    .policy-section p {
+      margin-bottom: 20px;
+    }
+    .policy-contact {
+      margin-top: 40px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+    .policy-contact h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #182848;
+    }
+    .policy-contact p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    .policy-contact a {
+      color: #4b6cb7;
+      font-weight: 500;
+    }
+    /* Footer */
+    footer {
+      background: #182848;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    /* Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Image Converter Tool</h1>
+      <nav>
+         <ul>
+         <li><a href="Index.html">Home</a></li>
+          <li><a href="About us.html">About Us</a></li>
+          <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+          <li><a href="Contact us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Privacy Policy Section -->
+    <section class="policy-section fade-in" id="privacy">
+      <h2>Privacy Policy</h2>
+      <p>
+        At Image Converter Tool, your privacy is our priority. We are committed to protecting the personal information you share with us and ensuring that your data is handled securely.
+      </p>
+      <p>
+        <strong>Information Collection:</strong> We may collect information such as your name, email address, and usage data when you interact with our website. This data is used solely to improve our services and enhance your experience.
+      </p>
+      <p>
+        <strong>Use of Information:</strong> The data collected is used to provide and optimize our image conversion services. We never sell or rent your personal information to third parties.
+      </p>
+      <p>
+        <strong>Data Security:</strong> We implement industry-standard security measures to protect your data against unauthorized access and other security threats.
+      </p>
+      <p>
+        <strong>Cookies:</strong> Our website uses cookies to improve user experience and to analyze site traffic. You can manage your cookie settings through your browser.
+      </p>
+      <p>
+        <strong>Third-Party Links:</strong> Our site may contain links to external websites. Please note that we are not responsible for the privacy practices of these external sites.
+      </p>
+      <p>
+        <strong>Policy Updates:</strong> We reserve the right to update this Privacy Policy as necessary. Changes will be posted on this page along with the effective date.
+      </p>
+      
+      <div class="policy-contact">
+        <h3>Contact Us</h3>
+        <p>If you have any questions or concerns about our Privacy Policy, please feel free to contact us:</p>
+        <p><strong>Email:</strong> <a href="mailto:zahirsheikh812@gmail.com">zahirsheikh812@gmail.com</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/zahir-pixel" target="_blank">@zahir-pixel</a></p>
+        <p><strong>Website:</strong> <a href="#">Visit our website</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Image Converter Tool. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Fade-in Animation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
+      const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+</body>
+</html>
